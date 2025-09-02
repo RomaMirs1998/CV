@@ -58,9 +58,10 @@ const IconMap = (props) => (
 );
 
 // ---------------- Components ----------------
-const Nav = () => {
+export const Nav = () => {
   const [open, setOpen] = React.useState(false);
   const links = [
+    { href: "/team", label: "Team" },
     { href: "#faelle", label: "Fälle" },
     { href: "#leistungen", label: "Leistungen" },
     { href: "#ueber", label: "Über mich" },
@@ -474,7 +475,7 @@ const Contact = () => {
   );
 };
 
-const Footer = () => (
+export const Footer = () => (
   <footer className="border-t border-transparent bg-[var(--brand-green-950)] text-[var(--neutral-100)]">
     <Container className="py-8 flex flex-col md:flex-row items-center justify-between gap-6 text-sm">
       <div className="flex items-center gap-3">
