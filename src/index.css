@@ -1,4 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html { scroll-behavior: smooth; } /* optional */
+
+/* =========================
+   CSS Variables (Tokens)
+   ========================= */
+:root {
+  --brand-green-950:#061B16;
+  --brand-green-900:#0B2E26;
+  --brand-green-700:#145244;
+
+  --brand-gold-600:#C9A227;
+  --brand-gold-500:#D4AF37;
+
+  --neutral-100:#F7F5EF;
+  --neutral-900:#0A0E0C;
+
+  --radius-sm:6px; --radius-md:12px; --radius-lg:16px; --radius-xl:24px;
+  --shadow-micro:0 1px 2px rgba(6,27,22,.08);
+  --shadow-soft:0 6px 16px rgba(6,27,22,.12);
+  --shadow-lift:0 8px 24px rgba(6,27,22,.16);
+}
+
+/* Base Typography */
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { font-feature-settings: "ss01","liga","kern"; }
+  h1,h2,h3 { font-family: theme(fontFamily.display); }
+  ::selection { background: var(--brand-green-900); color: var(--neutral-100); }
+}
+
+/* Focus ring utility */
+.focus-ring {
+  outline: 2px solid var(--brand-gold-500);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* Utility for gold hairline borders */
+.hairline-gold { border: 1px solid rgb(212 175 55 / 0.3); }
+
+/* Nav blur backdrop on light paper */
+.nav-blur {
+  @apply backdrop-blur;
+  background: color-mix(in oklab, white 70%, transparent);
+}
+
+/* Prose tweak for serif quotes */
+.prose-quote {
+  quotes: "“" "”" "‚" "‘";
+}
