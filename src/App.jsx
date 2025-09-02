@@ -72,7 +72,7 @@ export const Nav = () => {
   return (
     <header className="fixed inset-x-0 top-0 z-50 nav-blur border-b border-[color:rgb(212_175_55_/0.3)]">
       <Container className="h-16 flex items-center justify-between">
-        <a href="#home" className="flex items-center gap-3 focus-visible:focus-ring">
+        <a href="/" className="flex items-center gap-3 focus-visible:focus-ring">
           <div className="h-9 w-9 rounded-[var(--radius-md)] grid place-content-center bg-[var(--brand-green-900)] text-[var(--brand-gold-500)] font-semibold shadow-[var(--shadow-micro)]">
             SP
           </div>
