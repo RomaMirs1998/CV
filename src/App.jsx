@@ -61,13 +61,6 @@ const IconMap = (props) => (
 export const Nav = () => {
   const [open, setOpen] = React.useState(false);
   const links = [
-    { href: "/team", label: "Team" },
-    { href: "#faelle", label: "Fälle" },
-    { href: "#leistungen", label: "Leistungen" },
-    { href: "#ueber", label: "Über mich" },
-    { href: "#prozess", label: "Prozess" },
-    { href: "#stimmen", label: "Stimmen" },
-    { href: "#kontakt", label: "Kontakt" }
   ];
   return (
     <header className="fixed inset-x-0 top-0 z-50 nav-blur border-b border-[color:rgb(212_175_55_/0.3)]">
@@ -325,18 +318,47 @@ const About = () => {
               <li className="flex items-start gap-3"><IconCheck className="text-[var(--brand-gold-500)]" /> Digitale Abwicklung und persönliche Begleitung</li>
             </ul>
 
-            <div className="mt-8 flex flex-wrap items-center gap-6 opacity-80">
-              <img src="https://cdn0.erstegroup.com/content/dam/at/spk-vorarlberg/Logo/SPK_web_internal-material_ORIGINAL.png" alt="Kundenlogo 1" className="h-6" loading="lazy" />
-              <img src="https://logos-world.net/wp-content/uploads/2023/02/Raiffeisen-Bank-International-Logo.png" alt="Kundenlogo 2" className="h-6" loading="lazy" />
-              <img src="https://tse1.mm.bing.net/th/id/OIP.3D4T0_-qp-MSdNMg0ZD0ywHaB6?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Kundenlogo 3" className="h-6" loading="lazy" />
-              <img src="https://www.capitalo.at/wp-content/uploads/2018/11/uniqa.png" alt="Kundenlogo 4" className="h-6" loading="lazy" />
-            </div>
+       
           </motion.div>
         </motion.div>
       </Container>
     </Section>
   );
 };
+
+const IconArrowRight = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    stroke="currentColor"
+    className="w-6 h-6 text-[var(--brand-green-900)] hidden md:block self-center"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M5 12h14M13 6l6 6-6 6"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const IconArrowDown = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    stroke="currentColor"
+    className="w-6 h-6 text-[var(--brand-green-900)] md:hidden self-center"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M12 5v14M6 13l6 6 6-6"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 
 const Process = () => {
   const steps = [
@@ -346,30 +368,58 @@ const Process = () => {
     { n: 4, t: "Umsetzung", d: "Gemeinsam entscheiden & Verträge digital umsetzen." },
     { n: 5, t: "Begleitung", d: "Regelmäßige Updates und Anpassungen bei Bedarf." }
   ];
+
   return (
     <Section id="prozess" className="py-24">
       <Container>
-        <h2 className="text-[40px] leading-[48px] font-display text-center">So arbeiten wir zusammen</h2>
+        <h2 className="text-[40px] leading-[48px] font-display text-center">
+          So arbeiten wir zusammen
+        </h2>
         <div className="mx-auto mt-2 h-[2px] w-16 bg-[var(--brand-gold-500)]/70 rounded-full" />
+
         <motion.div
           variants={stagger}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="mt-10 grid gap-6 md:grid-cols-3 lg:grid-cols-5"
+          className="mt-12 flex flex-col md:flex-row md:items-stretch md:justify-center md:gap-6"
         >
-          {steps.map(s => (
-            <motion.div key={s.n} variants={fadeUp} className="relative rounded-[var(--radius-xl)] bg-white hairline-gold p-6 shadow-[var(--shadow-micro)]">
-              <div className="absolute -top-3 left-4 rounded-full bg-[var(--brand-green-900)] px-3 py-1 text-xs text-[var(--brand-gold-500)]">{s.n}</div>
-              <h3 className="mt-2 font-display text-lg">{s.t}</h3>
-              <p className="mt-1 text-sm text-[var(--brand-green-900)]/85">{s.d}</p>
-            </motion.div>
+          {steps.map((s, i) => (
+            <React.Fragment key={s.n}>
+              <motion.div
+                variants={fadeUp}
+                className="flex-1 flex flex-col justify-between rounded-[var(--radius-xl)] bg-white hairline-gold p-6 shadow-[var(--shadow-soft)] min-h-[220px] text-center"
+              >
+                {/* Dezente Nummer */}
+                <div className="flex justify-center">
+                  <div className="h-6 w-6 flex items-center justify-center rounded-full border border-[var(--brand-gold-500)] bg-[var(--brand-gold-500)]/10 text-[var(--brand-green-900)] text-xs">
+                    {s.n}
+                  </div>
+                </div>
+
+                {/* Inhalt */}
+                <div className="mt-4">
+                  <h3 className="font-display text-lg">{s.t}</h3>
+                  <p className="mt-2 text-sm text-[var(--brand-green-900)]/85">{s.d}</p>
+                </div>
+              </motion.div>
+
+              {/* Pfeile zwischen Steps */}
+              {i < steps.length - 1 && (
+                <>
+                  <IconArrowRight />
+                  <IconArrowDown />
+                </>
+              )}
+            </React.Fragment>
           ))}
         </motion.div>
       </Container>
     </Section>
   );
 };
+
+
 
 const Testimonials = () => {
   const quotes = [
@@ -382,7 +432,7 @@ const Testimonials = () => {
       <Container>
         <div className="mb-10 flex items-end justify-between">
           <div>
-            <h2 className="text-[40px] leading-[48px] font-display">Kundenstimmen</h2>
+            <h2 className="text-[40px] leading-[48px] font-display">Partnerstimmen</h2>
             <div className="mt-2 h-[2px] w-16 bg-[var(--brand-gold-500)]/70 rounded-full" />
           </div>
         </div>
@@ -405,6 +455,114 @@ const Testimonials = () => {
     </Section>
   );
 };
+
+const PartnerApply = () => {
+  return (
+    <Section id="partner-apply" className="py-24 bg-gradient-to-b from-[var(--neutral-50)] to-white">
+      <Container>
+        {/* Headline */}
+        <div className="text-center mb-12 max-w-2xl mx-auto">
+          <h2 className="text-[40px] leading-[48px] font-display">Partner werden</h2>
+          <div className="mx-auto mt-3 h-[2px] w-16 bg-[var(--brand-gold-500)]/70 rounded-full" />
+          <p className="mt-5 text-lg text-[var(--brand-green-900)]/85">
+            Sie möchten Teil meines Partnernetzwerks werden?  
+            Bewerben Sie sich unkompliziert über das Formular – ich freue mich über Ihr Interesse!
+          </p>
+        </div>
+
+        {/* Form Card */}
+        <div className="max-w-3xl mx-auto rounded-[var(--radius-xl)] bg-white shadow-[var(--shadow-soft)] border border-[color:rgb(212_175_55_/0.3)] p-8">
+          <form
+            className="space-y-6"
+            onSubmit={(e) => {
+              e.preventDefault();
+              alert("Vielen Dank für Ihre Bewerbung! Ich melde mich zeitnah.");
+            }}
+          >
+            <div className="grid gap-6 md:grid-cols-2">
+              <div>
+                <label htmlFor="company" className="block text-sm font-medium text-[var(--brand-green-700)]">
+                  Unternehmen
+                </label>
+                <input
+                  id="company"
+                  name="company"
+                  required
+                  className="mt-2 w-full rounded-[var(--radius-lg)] border border-[color:rgb(20_82_68_/0.2)] bg-[var(--neutral-50)] px-4 py-3 focus:outline-2 focus:outline-[var(--brand-gold-500)]"
+                  placeholder="Firmenname"
+                />
+              </div>
+              <div>
+                <label htmlFor="contact" className="block text-sm font-medium text-[var(--brand-green-700)]">
+                  Ansprechpartner
+                </label>
+                <input
+                  id="contact"
+                  name="contact"
+                  required
+                  className="mt-2 w-full rounded-[var(--radius-lg)] border border-[color:rgb(20_82_68_/0.2)] bg-[var(--neutral-50)] px-4 py-3 focus:outline-2 focus:outline-[var(--brand-gold-500)]"
+                  placeholder="Vor- und Nachname"
+                />
+              </div>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2">
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-[var(--brand-green-700)]">
+                  E-Mail
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  className="mt-2 w-full rounded-[var(--radius-lg)] border border-[color:rgb(20_82_68_/0.2)] bg-[var(--neutral-50)] px-4 py-3 focus:outline-2 focus:outline-[var(--brand-gold-500)]"
+                  placeholder="kontakt@mail.de"
+                />
+              </div>
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-[var(--brand-green-700)]">
+                  Telefonnummer (optional)
+                </label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  className="mt-2 w-full rounded-[var(--radius-lg)] border border-[color:rgb(20_82_68_/0.2)] bg-[var(--neutral-50)] px-4 py-3 focus:outline-2 focus:outline-[var(--brand-gold-500)]"
+                  placeholder="+49 ..."
+                />
+              </div>
+            </div>
+
+            <div>
+              <label htmlFor="msg" className="block text-sm font-medium text-[var(--brand-green-700)]">
+                Nachricht
+              </label>
+              <textarea
+                id="msg"
+                name="msg"
+                rows="4"
+                className="mt-2 w-full rounded-[var(--radius-lg)] border border-[color:rgb(20_82_68_/0.2)] bg-[var(--neutral-50)] px-4 py-3 focus:outline-2 focus:outline-[var(--brand-gold-500)]"
+                placeholder="Kurze Vorstellung Ihres Unternehmens, Motivation & Ziele."
+              />
+            </div>
+
+            <div className="flex justify-center">
+              <button
+                type="submit"
+                className="inline-flex items-center justify-center h-14 px-8 rounded-[var(--radius-lg)] bg-[var(--brand-green-900)] text-[var(--neutral-100)] font-medium shadow-[var(--shadow-micro)] hover:bg-[var(--brand-green-700)] focus-visible:focus-ring transition"
+              >
+                Bewerbung absenden
+              </button>
+            </div>
+          </form>
+        </div>
+      </Container>
+    </Section>
+  );
+};
+
+
 
 const Contact = () => {
   return (
@@ -475,6 +633,107 @@ const Contact = () => {
   );
 };
 
+const Recommend = () => {
+  return (
+    <Section id="empfehlen" className="py-20 bg-[var(--neutral-50)]">
+      <Container className="text-center">
+        <h2 className="text-[32px] sm:text-[40px] leading-[1.2] font-display">
+          Weiterempfehlen und Profitieren
+        </h2>
+        <div className="mx-auto mt-3 h-[2px] w-20 bg-[var(--brand-gold-500)]/70 rounded-full" />
+        <p className="mt-4 text-[var(--brand-green-900)]/85 max-w-2xl mx-auto">
+          Empfehlen Sie meine Finanz- & Immobilienberatung weiter und sichern Sie sich attraktive Vorteile.
+        </p>
+
+        <div className="mt-8">
+          <a
+            href="https://link.mit-bester-empfehlung.de/pages/7463--penninger-1fd9d.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center h-14 px-6 rounded-[var(--radius-lg)] bg-[var(--brand-green-900)] text-[var(--neutral-100)] shadow-[var(--shadow-micro)] hover:bg-[var(--brand-green-700)] focus-visible:focus-ring transition"
+          >
+            Jetzt Weiterempfehlen
+          </a>
+        </div>
+      </Container>
+    </Section>
+  );
+};
+
+
+const Partners = () => {
+  const mainPartners = [
+    { name: "Partner 1", logo: "https://th.bing.com/th/id/OIP.LA553mzoVxjhnhZILVLHRwHaDi?w=325&h=167&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3", url: "https://partner1.de" },
+    { name: "Partner 2", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg", url: "https://partner2.de" },
+    { name: "Partner 3", logo: "https://th.bing.com/th/id/OIP.MshhOtTT6KkUzGH1R7kE9wAAAA?w=234&h=101&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3", url: "https://partner3.de" }
+  ];
+
+  const otherPartners = [
+    { name: "Sparkasse", logo: "https://th.bing.com/th/id/OIP.9EqQdEd0GeVnfGhyM9HAxQHaHk?w=181&h=185&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3", url: "https://sparkasse.de" },
+    { name: "Allianz", logo: "https://th.bing.com/th/id/OIP.T7IUXqol3NYVajE9nZGRwwHaEK?w=273&h=180&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3", url: "https://allianz.de" },
+  ];
+
+  return (
+    <Section id="partner" className="py-24 bg-gradient-to-b from-white to-[var(--neutral-50)]">
+      <Container>
+        {/* Hauptpartner */}
+        <div className="mb-16 text-center">
+          <h2 className="text-[40px] leading-[48px] font-display">Partner</h2>
+          <div className="mx-auto mt-3 h-[2px] w-20 bg-[var(--brand-gold-500)]/70 rounded-full" />
+          <p className="mt-4 text-[var(--brand-green-900)]/85">
+            Eine Auswahl unserer wichtigsten Kooperationspartner
+          </p>
+        </div>
+
+        <div className="grid gap-8 sm:grid-cols-3">
+          {mainPartners.map((p) => (
+            <a
+              key={p.name}
+              href={p.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex items-center justify-center rounded-[var(--radius-xl)] bg-white border border-[color:rgb(212_175_55_/0.3)] shadow-[var(--shadow-micro)] hover:shadow-[var(--shadow-lift)] transition p-10"
+            >
+              <img
+                src={p.logo}
+                alt={p.name}
+                className="max-h-16 object-contain opacity-90 group-hover:opacity-100 transition"
+                loading="lazy"
+              />
+              <span className="sr-only">{p.name}</span>
+            </a>
+          ))}
+        </div>
+
+        {/* Weitere Partner */}
+        <div className="mt-20 text-center">
+          <h3 className="text-xl font-display mb-6">Weitere Partner</h3>
+          <div className="flex flex-wrap items-center justify-center gap-10 opacity-80 hover:opacity-100 transition">
+            {otherPartners.map((p) => (
+              <a
+                key={p.name}
+                href={p.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center"
+              >
+                <img
+                  src={p.logo}
+                  alt={p.name}
+                  className="h-12 object-contain"
+                  loading="lazy"
+                />
+              </a>
+            ))}
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+};
+
+
+
 export const Footer = () => (
   <footer className="border-t border-transparent bg-[var(--brand-green-950)] text-[var(--neutral-100)]">
     <Container className="py-8 flex flex-col md:flex-row items-center justify-between gap-6 text-sm">
@@ -483,9 +742,6 @@ export const Footer = () => (
         <span>© {new Date().getFullYear()} Sebastian Penninger</span>
       </div>
       <div className="flex items-center gap-6">
-        <a href="#faelle" className="hover:underline underline-offset-4 decoration-[var(--brand-gold-500)] focus-visible:focus-ring">Fälle</a>
-        <a href="#leistungen" className="hover:underline underline-offset-4 decoration-[var(--brand-gold-500)] focus-visible:focus-ring">Leistungen</a>
-        <a href="#kontakt" className="hover:underline underline-offset-4 decoration-[var(--brand-gold-500)] focus-visible:focus-ring">Kontakt</a>
         <a href="/impressum.html" className="hover:underline underline-offset-4 decoration-[var(--brand-gold-500)] focus-visible:focus-ring">Impressum</a>
         <a href="/datenschutz.html" className="hover:underline underline-offset-4 decoration-[var(--brand-gold-500)] focus-visible:focus-ring">Datenschutz</a>
       </div>
@@ -522,7 +778,10 @@ export default function App() {
         <About />
         <Process />
         <Testimonials />
+         <Recommend /> 
         <Contact />
+        <Partners />
+         <PartnerApply />   
       </main>
       <Footer />
     </div>
