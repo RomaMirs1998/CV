@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import { Home, Baby, Ruler, Building2, KeyRound } from "lucide-react";
 
 import seb from "./assets/seb.jpg"
 
@@ -560,15 +561,30 @@ const Testimonials = () => {
 
 const PartnerApply = () => {
   return (
-    <Section id="partner-apply" className="py-24 bg-gradient-to-b from-[var(--neutral-50)] to-white">
+    <Section
+      id="partner-apply"
+      className="py-24 bg-gradient-to-b from-[var(--neutral-50)] to-white"
+    >
       <Container>
         {/* Headline */}
         <div className="text-center mb-12 max-w-2xl mx-auto">
-          <h2 className="text-[40px] leading-[48px] font-display">Partner werden</h2>
+          <h2 className="text-[40px] leading-[48px] font-display">
+            Geschäftspartner werden
+          </h2>
           <div className="mx-auto mt-3 h-[2px] w-16 bg-[var(--brand-gold-500)]/70 rounded-full" />
           <p className="mt-5 text-lg text-[var(--brand-green-900)]/85">
-            Sie möchten Teil meines Partnernetzwerks werden?  
-            Bewerben Sie sich unkompliziert über das Formular – ich freue mich über Ihr Interesse!
+            Du hast den Traum, Menschen zu unterstützen – sei es bei Finanzen,
+            Absicherung, Immobilien oder Einrichtung? Dann bist du bei mir genau
+            richtig.
+          </p>
+          <p className="mt-4 text-lg text-[var(--brand-green-900)]/85">
+            Starte ganz einfach nebenberuflich und wachse Schritt für Schritt in
+            eine spannende Tätigkeit hinein. Ich freue mich darauf, mein Team
+            mit motivierten Partnern zu erweitern.
+          </p>
+          <p className="mt-4 text-lg text-[var(--brand-green-900)]/85">
+            Lass uns ein unverbindliches Kennenlerngespräch vereinbaren – ich
+            bin gespannt auf dich!
           </p>
         </div>
 
@@ -583,7 +599,10 @@ const PartnerApply = () => {
           >
             <div className="grid gap-6 md:grid-cols-2">
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-[var(--brand-green-700)]">
+                <label
+                  htmlFor="company"
+                  className="block text-sm font-medium text-[var(--brand-green-700)]"
+                >
                   Unternehmen
                 </label>
                 <input
@@ -595,7 +614,10 @@ const PartnerApply = () => {
                 />
               </div>
               <div>
-                <label htmlFor="contact" className="block text-sm font-medium text-[var(--brand-green-700)]">
+                <label
+                  htmlFor="contact"
+                  className="block text-sm font-medium text-[var(--brand-green-700)]"
+                >
                   Ansprechpartner
                 </label>
                 <input
@@ -610,7 +632,10 @@ const PartnerApply = () => {
 
             <div className="grid gap-6 md:grid-cols-2">
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-[var(--brand-green-700)]">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-[var(--brand-green-700)]"
+                >
                   E-Mail
                 </label>
                 <input
@@ -623,7 +648,10 @@ const PartnerApply = () => {
                 />
               </div>
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-[var(--brand-green-700)]">
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-[var(--brand-green-700)]"
+                >
                   Telefonnummer (optional)
                 </label>
                 <input
@@ -637,7 +665,10 @@ const PartnerApply = () => {
             </div>
 
             <div>
-              <label htmlFor="msg" className="block text-sm font-medium text-[var(--brand-green-700)]">
+              <label
+                htmlFor="msg"
+                className="block text-sm font-medium text-[var(--brand-green-700)]"
+              >
                 Nachricht
               </label>
               <textarea
@@ -663,6 +694,7 @@ const PartnerApply = () => {
     </Section>
   );
 };
+
 
 
 
@@ -720,20 +752,102 @@ const Contact = () => {
           <motion.aside variants={fadeUp} className="lg:col-span-5 rounded-[var(--radius-xl)] bg-white hairline-gold p-6 shadow-[var(--shadow-micro)]">
             <h3 className="font-display text-lg">Kontakt</h3>
             <ul className="mt-4 space-y-3 text-sm">
-              <li className="flex items-center gap-3"><IconMail /> sebastian.penninger@example.com</li>
-              <li className="flex items-center gap-3"><IconPhone /> +49 170 000000</li>
+              <li className="flex items-center gap-3"><IconMail /> office@sebastian-penninger.com</li>
+              <li className="flex items-center gap-3"><IconPhone /> +43 664 3019293</li>
               <li className="flex items-center gap-3"><IconMap /> Regensburg & Remote (DE)</li>
             </ul>
-            <div className="mt-8 rounded-[var(--radius-lg)] bg-[var(--brand-green-900)]/5 p-4 text-sm text-[var(--brand-green-900)]/90">
-              <p className="font-medium">Hinweis zur Unabhängigkeit</p>
-              <p>Ich arbeite provisionsfrei und honorarbasiert. Empfehlungen erfolgen ausschließlich im Interesse meiner Mandanten.</p>
-            </div>
+           <div className="mt-8 rounded-[var(--radius-lg)] bg-[var(--brand-green-900)]/5 p-4 text-sm text-[var(--brand-green-900)]/90">
+  <p className="font-medium">Hinweis zur Unabhängigkeit</p>
+  <p>
+    Ich arbeite provisionsfrei. Empfehlungen erfolgen ausschließlich im Interesse meiner Mandanten.
+  </p>
+  <p className="mt-2">
+    Ich betreue die Gebiete <strong>Wels, Linz, Steyr</strong> – sowie auf Anfrage auch <strong>ganz Österreich</strong>.
+  </p>
+</div>
+
           </motion.aside>
         </motion.div>
       </Container>
     </Section>
   );
 };
+
+const Topics = () => {
+  const topics = [
+    {
+      title: "Einrichtungsberatung",
+      desc: "Kreative Ideen & clevere Raumlösungen",
+      icon: Ruler
+    },
+    {
+      title: "Kindervorsorge",
+      desc: "Heute schon für die Zukunft vorsorgen",
+      icon: Baby
+    },
+    {
+      title: "Einrichtungsabwicklung",
+      desc: "Von der Planung bis zur Umsetzung mit dem Tischler",
+      icon: Home
+    },
+    {
+      title: "Bauträgerprojekte",
+      desc: "Begleitung vom ersten Konzept bis zur Übergabe",
+      icon: Building2
+    },
+    {
+      title: "Eigenimmobilie",
+      desc: "Finanzierung, Planung & Realisierung aus einer Hand",
+      icon: KeyRound
+    }
+  ];
+
+  return (
+    <Section id="themen" className="py-24 bg-gradient-to-b from-white to-[var(--neutral-50)]">
+      <Container>
+        {/* Heading */}
+        <div className="mb-16 text-center">
+          <h2 className="text-[40px] leading-[48px] font-display">Themen</h2>
+          <div className="mx-auto mt-3 h-[3px] w-20 bg-[var(--brand-gold-500)] rounded-full" />
+          <p className="mt-6 max-w-2xl mx-auto text-[var(--brand-green-900)]/85 text-lg">
+            Wichtige Themen, die ich für meine Kunden begleite – praxisnah, verständlich und mit
+            ganzheitlichem Blick.
+          </p>
+        </div>
+
+        {/* Cards */}
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {topics.map((t) => {
+            const Icon = t.icon;
+            return (
+              <div
+                key={t.title}
+                className="group relative flex flex-col rounded-[var(--radius-xl)] 
+                           bg-white border border-[color:rgb(212_175_55_/0.25)] 
+                           shadow-[var(--shadow-micro)] hover:shadow-[var(--shadow-soft)] 
+                           transition overflow-hidden"
+              >
+                {/* Icon Header */}
+                <div className="h-20 flex items-center justify-center bg-[var(--brand-green-900)]/5 group-hover:bg-[var(--brand-green-900)]/10 transition">
+                  <Icon className="h-8 w-8 text-[var(--brand-gold-500)]" />
+                </div>
+
+                {/* Content */}
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="font-display text-lg text-[var(--brand-green-900)]">
+                    {t.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-[var(--brand-green-900)]/85">{t.desc}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </Container>
+    </Section>
+  );
+};
+
 
 const Recommend = () => {
   return (
@@ -812,40 +926,67 @@ const MainPartners = () => {
 
 const OtherPartners = () => {
   const otherPartners = [
-    { name: "Sparkasse", logo: "https://th.bing.com/th/id/OIP.9EqQdEd0GeVnfGhyM9HAxQHaHk?w=181&h=185&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3", url: "https://sparkasse.de" },
-    { name: "Allianz", logo: "https://th.bing.com/th/id/OIP.T7IUXqol3NYVajE9nZGRwwHaEK?w=273&h=180&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3", url: "https://allianz.de" },
+    "Merkur Versicherung AG",
+    "Helvetia Versicherungen AG",
+    "Allianz Österreich",
+    "ARAG SE, Direktion Österreich",
+    "UNIQA Versicherungen AG",
+    "ARTS Asset Management GmbH",
+    "C&P Immobilien AG",
+    "Wiener Städtische Versicherung AG",
+    "Donau Brokerline Versicherungs-Service GmbH",
+    "SIGNAL IDUNA Allgemeine Versicherung AG",
+    "Ideal Lebensversicherung a. G.",
+    "SIGNAL IDUNA Krankenversicherung a. G.",
+    "ERGO Versicherung AG",
+    "NÜRNBERGER Allgemeine Versicherungs AG",
+    "Proxalto Lebensversicherung AG",
+    "Baloise Lebensversicherung AG",
+    "ROLAND Rechtsschutz Versicherung-AG",
+    "R+V Allgemeine Versicherung AG",
+    "HanseMerkur Allgemeine Versicherung AG",
+    "HDI Versicherung AG",
+    "Wüstenrot",
+     "Town & Country Haus", 
+     "Amundi Deutschland"
+     , "Qualitypool GmbH"
   ];
 
   return (
     <Section id="weitere-partner" className="py-24 bg-gradient-to-b from-[var(--neutral-50)] to-white">
       <Container>
-        <div className="text-center mb-12">
-          <h2 className="text-[32px] leading-[40px] font-display">Weitere Partner</h2>
-          <div className="mx-auto mt-2 h-[2px] w-16 bg-[var(--brand-gold-500)]/70 rounded-full" />
+        {/* Heading */}
+        <div className="text-center mb-16">
+          <h2 className="text-[36px] leading-[44px] font-display">Weitere Partner</h2>
+          <div className="mx-auto mt-3 h-[3px] w-20 bg-[var(--brand-gold-500)] rounded-full" />
+          <p className="mt-6 max-w-2xl mx-auto text-[var(--brand-green-900)]/85 text-lg">
+            Unsere breite Auswahl an Partnern aus Versicherung, Investment, Immobilien & mehr –
+            damit Sie in jedem Bereich bestens aufgestellt sind.
+          </p>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-10 opacity-80 hover:opacity-100 transition">
-          {otherPartners.map((p) => (
-            <a
-              key={p.name}
-              href={p.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
+        {/* Partner Grid */}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {otherPartners.map((name, i) => (
+            <div
+              key={i}
+              className="flex items-center gap-3 rounded-[var(--radius-lg)] bg-white/70 
+                         border border-[color:rgb(212_175_55_/0.25)] 
+                         shadow-[var(--shadow-micro)] hover:shadow-[var(--shadow-soft)] 
+                         transition p-4"
             >
-              <img
-                src={p.logo}
-                alt={p.name}
-                className="h-12 object-contain"
-                loading="lazy"
-              />
-            </a>
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--brand-gold-500)]/15">
+                <IconCheck className="text-[var(--brand-gold-500)] h-4 w-4" />
+              </div>
+              <span className="text-[var(--brand-green-900)]/90 text-sm font-medium">{name}</span>
+            </div>
           ))}
         </div>
       </Container>
     </Section>
   );
 };
+
 
 
 
@@ -893,10 +1034,11 @@ export default function App() {
         <About />
         <Process />
         <Testimonials />
+        <Topics/>
         <MainPartners/>
          <Recommend /> 
         <Contact />
-        
+        <OtherPartners/>
          <PartnerApply />   
       </main>
       <Footer />
