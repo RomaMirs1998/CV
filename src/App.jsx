@@ -71,7 +71,7 @@ export const Nav = () => {
           </div>
           <div className="leading-tight">
             <p className="font-medium">Sebastian Penninger</p>
-            <p className="text-xs tracking-[0.08em] uppercase text-[var(--brand-green-700)]">Finanz- & Immobilienberatung</p>
+            <p className="text-xs tracking-[0.08em] uppercase text-[var(--brand-green-700)]">Sicher Planen</p>
           </div>
         </a>
 
@@ -139,10 +139,11 @@ const Hero = () => {
           <motion.div variants={fadeUp} className="lg:col-span-7">
             <p className="text-xs tracking-[0.12em] uppercase text-[var(--brand-green-700)]">Unabhängig • Transparent • Planbar</p>
             <h1 className="mt-3 font-display text-[40px] leading-[1.15] sm:text-[48px] sm:leading-[1.15] lg:text-[56px] lg:leading-[1.15]">
-              Vermögen aufbauen & Immobilien clever finanzieren – mit einem Plan, der zu Ihrem Leben passt.
+              Sicher planen in allen Lebensbereichen – vom Vermögensaufbau über Absicherung und Immobilien bis hin zur individuellen Einrichtung.
+              
             </h1>
             <p className="mt-4 text-[18px] leading-8 text-[var(--brand-green-900)]/85">
-              Von der Analyse bis zur Umsetzung: Baufinanzierung, Kapitalanlagen und Absicherung – provisionsfrei und honorarbasiert.
+             Von der ersten Analyse bis zur Umsetzung begleiten wir dich: Finanzierung, Immobilientraum, Absicherung – alles aus einer Hand..
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
@@ -159,9 +160,9 @@ const Hero = () => {
               </a>
             </div>
             <div className="mt-6 flex flex-wrap gap-6 text-xs text-[var(--brand-green-700)]">
-              <span className="inline-flex items-center gap-2"><IconCheck className="text-[var(--brand-gold-500)] h-4 w-4"/> Zertifiziert (z. B. §34f/§34i)</span>
-              <span className="inline-flex items-center gap-2"><IconDot className="text-[var(--brand-gold-500)] h-3 w-3"/> Provisionsfrei • honorarbasiert</span>
-              <span className="inline-flex items-center gap-2"><IconDot className="text-[var(--brand-gold-500)] h-3 w-3"/> 250+ betreute Kund:innen</span>
+              <span className="inline-flex items-center gap-2"><IconCheck className="text-[var(--brand-gold-500)] h-4 w-4"/> Zertifiziert</span>
+              <span className="inline-flex items-center gap-2"><IconDot className="text-[var(--brand-gold-500)] h-3 w-3"/> Provisionsbasis</span>
+              <span className="inline-flex items-center gap-2"><IconDot className="text-[var(--brand-gold-500)] h-3 w-3"/> Team im Hintergrund</span>
             </div>
           </motion.div>
 
@@ -179,9 +180,9 @@ const Hero = () => {
       </Container>
       <div className="mt-12 bg-[var(--brand-green-950)] text-[var(--neutral-100)]">
         <Container className="py-6 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-          <div><p className="text-2xl font-display">200.000€+</p><p className="text-xs tracking-[0.08em] uppercase opacity-80">verwaltetes Volumen</p></div>
-          <div><p className="text-2xl font-display">0,45% p.a.</p><p className="text-xs tracking-[0.08em] uppercase opacity-80">Zinsersparnis (Best Case)</p></div>
-          <div><p className="text-2xl font-display">4,9/5</p><p className="text-xs tracking-[0.08em] uppercase opacity-80">Ø Zufriedenheit</p></div>
+          <div><p className="text-2xl font-display">100+ bereute Kunden</p></div>
+          <div><p className="text-2xl font-display">bis zu 150€/M sparen</p></div>
+          <div><p className="text-2xl font-display">über 100+ Produktpartner</p></div>
         </Container>
       </div>
     </Section>
@@ -190,9 +191,9 @@ const Hero = () => {
 
 const Cases = () => {
   const items = [
-    { img: "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8eW91bmclMjBmYW1pbHl8ZW58MHx8MHx8fDA%3D", title: "Baufinanzierung junge Familie", meta: "Eigenheim • 2024", outcome: "0,45% p.a. günstiger durch Angebotsvergleich" },
-    { img: "https://plus.unsplash.com/premium_photo-1684175656320-5c3f701c082c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8V29obnVuZ2VufGVufDB8fDB8fHww", title: "Kapitalanlage Regensburg", meta: "2-Zimmer • Vermietung", outcome: "Cashflow-positiv ab Monat 1 bei 20% EK" },
-    { img: "https://media.istockphoto.com/id/924972386/photo/stock-market-digital-graph-chart-on-led-display-concept-a-large-display-of-daily-stock-market.webp?a=1&b=1&s=612x612&w=0&k=20&c=7CHp3xwZDgEWe3RKW37bV4oohdzQIEyY1UpWIgRb9E4=", title: "Depot-Optimierung", meta: "ETF • Gebühren", outcome: "TER von 1,6% → 0,24% gesenkt" }
+    { img: "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8eW91bmclMjBmYW1pbHl8ZW58MHx8MHx8fDA%3D", title: "Mit Stromersparnis zur Kinderabsicherung", meta: "Stromersparnis", outcome: "Schon 30 € im Monat eingespart – und am Ende rund 25.000 € für dein Kind vorgesorgt" },
+    { img: "https://th.bing.com/th/id/OIP.mloswkcoDeV8Kv4C-PAE_QHaEK?w=310&h=180&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3", title: "Kreditumschuldung lohnt sich", meta: "Kreditumschuldung", outcome: "Rund 20.000 € Ersparnis – allein über eine Laufzeit von 12 Jahren." },
+    { img: "https://th.bing.com/th/id/OIP.bdGN1H-krLc3X3hxIvS5YAHaE8?w=239&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7", title: "40 m² clever genutzt", meta: "Wohnqualität", outcome: "Alle Bedürfnisse auf kleinstem Raum geplant – mit smarten Lösungen, die Platz schaffen und Wohnqualität erhöhen." }
   ];
   return (
     <Section id="faelle" className="py-24">
@@ -232,7 +233,7 @@ const Cases = () => {
 };
 
 const Services = () => {
-  const items = [
+  const topItems = [
     {
       title: "Immobilien & Finanzierung",
       desc: "Vom ersten Objekt bis zum Portfolio – Analyse, Finanzierung, Begleitung bis zur Notarübergabe.",
@@ -249,6 +250,53 @@ const Services = () => {
       benefits: ["Risikomanagement", "Berufs- & Haftpflicht", "Renten- & Hinterbliebenenschutz"]
     }
   ];
+
+  const bottomItems = [
+    {
+      title: "Haushaltsoptimierung",
+      desc: "Wie bleibt mehr von deinem Geld übrig – und wie setzt du es sinnvoll ein?",
+      benefits: [
+        "Strom- & Gasvergleich",
+        "Versicherungs- & Sparformen im Vergleich",
+        "Übersichtliche Haushaltsrechnung"
+      ]
+    },
+    {
+      title: "Individuelle Einrichtung",
+      desc: "Wie holst du das Maximum aus deinem Wohnraum heraus?",
+      benefits: [
+        "Maßanfertigungen nach Bedarf",
+        "2D- & 3D-Planung",
+        "Komplette Abwicklung mit dem Tischler"
+      ]
+    }
+  ];
+
+  const renderCard = (it) => (
+    <motion.div
+      key={it.title}
+      variants={fadeUp}
+      className="group relative rounded-[var(--radius-xl)] border border-[color:rgb(212_175_55_/0.3)] bg-white p-6 shadow-[var(--shadow-micro)] hover:shadow-[var(--shadow-soft)] transition"
+    >
+      <h3 className="text-lg font-display">{it.title}</h3>
+      <p className="mt-2 text-sm text-[var(--brand-green-900)]/85">{it.desc}</p>
+      <ul className="mt-4 space-y-2 text-sm text-[var(--brand-green-900)]/90">
+        {it.benefits.map((b) => (
+          <li key={b} className="flex items-start gap-2">
+            <IconDot className="text-[var(--brand-gold-500)] h-3 w-3" />
+            <span>{b}</span>
+          </li>
+        ))}
+      </ul>
+      <a
+        href="#kontakt"
+        className="mt-6 inline-block rounded-[var(--radius-lg)] border border-[color:var(--brand-green-900)] px-4 py-2 text-sm text-[var(--brand-green-900)] hover:bg-[color:rgb(20_82_68_/0.06)] focus-visible:focus-ring"
+      >
+        Mehr erfahren
+      </a>
+    </motion.div>
+  );
+
   return (
     <Section id="leistungen" className="py-24">
       <Container>
@@ -258,6 +306,7 @@ const Services = () => {
           <p className="mt-3 text-[var(--brand-green-900)]/85">Klar formuliert. Kein Verkaufsjargon.</p>
         </div>
 
+        {/* obere Reihe */}
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -265,26 +314,24 @@ const Services = () => {
           viewport={{ once: true, amount: 0.2 }}
           className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
         >
-          {items.map((it) => (
-            <motion.div key={it.title} variants={fadeUp} className="group relative rounded-[var(--radius-xl)] border border-[color:rgb(212_175_55_/0.3)] bg-white p-6 shadow-[var(--shadow-micro)] hover:shadow-[var(--shadow-soft)] transition">
-              <h3 className="text-lg font-display">{it.title}</h3>
-              <p className="mt-2 text-sm text-[var(--brand-green-900)]/85">{it.desc}</p>
-              <ul className="mt-4 space-y-2 text-sm text-[var(--brand-green-900)]/90">
-                {it.benefits.map((b) => (
-                  <li key={b} className="flex items-start gap-2">
-                    <IconDot className="text-[var(--brand-gold-500)] h-3 w-3" />
-                    <span>{b}</span>
-                  </li>
-                ))}
-              </ul>
-              <a href="#kontakt" className="mt-6 inline-block rounded-[var(--radius-lg)] border border-[color:var(--brand-green-900)] px-4 py-2 text-sm text-[var(--brand-green-900)] hover:bg-[color:rgb(20_82_68_/0.06)] focus-visible:focus-ring">Mehr erfahren</a>
-            </motion.div>
-          ))}
+          {topItems.map(renderCard)}
+        </motion.div>
+
+        {/* untere Reihe */}
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-2 justify-center"
+        >
+          {bottomItems.map(renderCard)}
         </motion.div>
       </Container>
     </Section>
   );
 };
+
 
 const About = () => {
   return (
@@ -307,24 +354,44 @@ const About = () => {
           </motion.figure>
 
           <motion.div variants={fadeUp} className="lg:col-span-7">
-            <h2 className="text-[40px] leading-[48px] font-display">Über Sebastian</h2>
+            <h2 className="text-[40px] leading-[48px] font-display">Sebastian Penninger</h2>
             <div className="mt-2 h-[2px] w-16 bg-[var(--brand-gold-500)]/70 rounded-full" />
-            <p className="mt-4 text-[18px] leading-8 text-[var(--brand-green-900)]/90">
-              Seit über 8 Jahren begleite ich Menschen dabei, kluge Finanzentscheidungen zu treffen – unabhängig, transparent und nachvollziehbar.
-            </p>
-            <ul className="mt-6 space-y-3">
-              <li className="flex items-start gap-3"><IconCheck className="text-[var(--brand-gold-500)]" /> Zertifizierter Finanzanlagenfachmann (z. B. §34f GewO)</li>
-              <li className="flex items-start gap-3"><IconCheck className="text-[var(--brand-gold-500)]" /> Spezialisiert auf Kapitalanlagen & Baufinanzierungen</li>
-              <li className="flex items-start gap-3"><IconCheck className="text-[var(--brand-gold-500)]" /> Digitale Abwicklung und persönliche Begleitung</li>
-            </ul>
 
-       
+            <p className="mt-4 text-[18px] leading-8 text-[var(--brand-green-900)]/90">
+              Mein Motto: <strong>Sicher planen – in allen Aspekten.</strong>
+            </p>
+            <p className="mt-4 text-[18px] leading-8 text-[var(--brand-green-900)]/90">
+              Durch meine technische Ausbildung habe ich gelernt, präzise und lösungsorientiert zu denken.
+              Dieses Verständnis verbinde ich heute mit meinem Know-how im Finanzbereich – so kann ich Planung,
+              Absicherung und Umsetzung nahtlos miteinander kombinieren.
+            </p>
+            <p className="mt-4 text-[18px] leading-8 text-[var(--brand-green-900)]/90">
+              Von der Tischlerlehre über den Meistertitel bis hin zum Mehrfachagenten mit eigenem
+              Vermögensberater-Team habe ich mir ein breites Fundament aufgebaut. Genau diese Vielseitigkeit
+              ermöglicht es mir, Kunden ganzheitlich zu begleiten – von der Analyse bis zur Umsetzung.
+            </p>
+
+            <ul className="mt-6 space-y-3">
+              <li className="flex items-start gap-3">
+                <IconCheck className="text-[var(--brand-gold-500)]" />
+                Umfangreiche Ausbildungen & kontinuierliche Weiterbildung
+              </li>
+              <li className="flex items-start gap-3">
+                <IconCheck className="text-[var(--brand-gold-500)]" />
+                Beratung digital oder persönlich – flexibel nach Wunsch
+              </li>
+              <li className="flex items-start gap-3">
+                <IconCheck className="text-[var(--brand-gold-500)]" />
+                Zusammenarbeit auf Augenhöhe
+              </li>
+            </ul>
           </motion.div>
         </motion.div>
       </Container>
     </Section>
   );
 };
+
 
 const IconArrowRight = () => (
   <svg
@@ -385,39 +452,74 @@ const Process = () => {
           className="mt-12 flex flex-col md:flex-row md:items-stretch md:justify-center md:gap-6"
         >
           {steps.map((s, i) => (
-            <React.Fragment key={s.n}>
-              <motion.div
-                variants={fadeUp}
-                className="flex-1 flex flex-col justify-between rounded-[var(--radius-xl)] bg-white hairline-gold p-6 shadow-[var(--shadow-soft)] min-h-[220px] text-center"
-              >
-                {/* Dezente Nummer */}
-                <div className="flex justify-center">
-                  <div className="h-6 w-6 flex items-center justify-center rounded-full border border-[var(--brand-gold-500)] bg-[var(--brand-gold-500)]/10 text-[var(--brand-green-900)] text-xs">
-                    {s.n}
-                  </div>
-                </div>
-
-                {/* Inhalt */}
-                <div className="mt-4">
-                  <h3 className="font-display text-lg">{s.t}</h3>
-                  <p className="mt-2 text-sm text-[var(--brand-green-900)]/85">{s.d}</p>
-                </div>
-              </motion.div>
-
-              {/* Pfeile zwischen Steps */}
+            <motion.div
+              key={s.n}
+              variants={fadeUp}
+              className="relative flex-1 flex flex-col justify-between rounded-[var(--radius-xl)] bg-white hairline-gold p-6 shadow-[var(--shadow-soft)] min-h-[220px] text-center overflow-hidden"
+            >
+              {/* Hintergrund-Pfeil */}
               {i < steps.length - 1 && (
                 <>
-                  <IconArrowRight />
-                  <IconArrowDown />
+                  {/* Desktop: horizontaler Pfeil */}
+                  <div className="hidden md:flex absolute inset-y-0 right-0 h-full w-1/3 items-center justify-center opacity-10 pointer-events-none">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      className="w-full h-full text-[var(--brand-green-900)]"
+                      preserveAspectRatio="xMidYMid slice"
+                    >
+                      <path
+                        d="M5 12h14M13 6l6 6-6 6"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+
+                  {/* Mobile: vertikaler Pfeil */}
+                  <div className="md:hidden absolute inset-x-0 bottom-0 w-full h-1/3 flex items-center justify-center opacity-10 pointer-events-none">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      className="w-full h-full text-[var(--brand-green-900)]"
+                      preserveAspectRatio="xMidYMid slice"
+                    >
+                      <path
+                        d="M12 5v14M6 13l6 6 6-6"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
                 </>
               )}
-            </React.Fragment>
+
+              {/* Nummer */}
+              <div className="flex justify-center relative z-10">
+                <div className="h-6 w-6 flex items-center justify-center rounded-full border border-[var(--brand-gold-500)] bg-[var(--brand-gold-500)]/10 text-[var(--brand-green-900)] text-xs">
+                  {s.n}
+                </div>
+              </div>
+
+              {/* Inhalt */}
+              <div className="mt-4 relative z-10">
+                <h3 className="font-display text-lg">{s.t}</h3>
+                <p className="mt-2 text-sm text-[var(--brand-green-900)]/85">{s.d}</p>
+              </div>
+            </motion.div>
           ))}
         </motion.div>
       </Container>
     </Section>
   );
 };
+
 
 
 
@@ -642,7 +744,7 @@ const Recommend = () => {
         </h2>
         <div className="mx-auto mt-3 h-[2px] w-20 bg-[var(--brand-gold-500)]/70 rounded-full" />
         <p className="mt-4 text-[var(--brand-green-900)]/85 max-w-2xl mx-auto">
-          Empfehlen Sie meine Finanz- & Immobilienberatung weiter und sichern Sie sich attraktive Vorteile.
+          Empfehlen Sie meinen Service weiter und sichern Sie sich attraktive Vorteile.
         </p>
 
         <div className="mt-8">
@@ -661,71 +763,84 @@ const Recommend = () => {
 };
 
 
-const Partners = () => {
+const MainPartners = () => {
   const mainPartners = [
-    { name: "Partner 1", logo: "https://th.bing.com/th/id/OIP.LA553mzoVxjhnhZILVLHRwHaDi?w=325&h=167&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3", url: "https://partner1.de" },
-    { name: "Partner 2", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg", url: "https://partner2.de" },
-    { name: "Partner 3", logo: "https://th.bing.com/th/id/OIP.MshhOtTT6KkUzGH1R7kE9wAAAA?w=234&h=101&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3", url: "https://partner3.de" }
-  ];
-
-  const otherPartners = [
-    { name: "Sparkasse", logo: "https://th.bing.com/th/id/OIP.9EqQdEd0GeVnfGhyM9HAxQHaHk?w=181&h=185&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3", url: "https://sparkasse.de" },
-    { name: "Allianz", logo: "https://th.bing.com/th/id/OIP.T7IUXqol3NYVajE9nZGRwwHaEK?w=273&h=180&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3", url: "https://allianz.de" },
+    { name: "Partner 1", logo: "https://www.brindl-bau.at/templates/yootheme/cache/BrindlBau-3fc0e38b.png", url: "https://www.brindl-bau.at/" },
+    { name: "Partner 2", logo: "https://th.bing.com/th/id/OIP.LFHTromToae7XPrZTkGesQHaBf?w=339&h=70&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3", url: "https://www.lidauer.at/" },
+    { name: "Partner 3", logo: "https://karriere.ovb.de/bilder/ovb/symbole/ovb_logo.png", url: "https://www.ovb.at/" },
+    { name: "Partner 4", logo: "https://static.wixstatic.com/media/b6b09b_bfc3a2d6c00d43a9a4d4d450dd195626~mv2.webp/v1/fill/w_386,h_186,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SKT%20Logo_transparent_png-2.webp", url: "https://www.skt-finance.at/" }
   ];
 
   return (
-    <Section id="partner" className="py-24 bg-gradient-to-b from-white to-[var(--neutral-50)]">
+    <Section id="hauptpartner" className="py-24 bg-gradient-to-b from-white to-[var(--neutral-50)]">
       <Container>
-        {/* Hauptpartner */}
         <div className="mb-16 text-center">
-          <h2 className="text-[40px] leading-[48px] font-display">Partner</h2>
+          <h2 className="text-[40px] leading-[48px] font-display">Hauptpartner</h2>
           <div className="mx-auto mt-3 h-[2px] w-20 bg-[var(--brand-gold-500)]/70 rounded-full" />
           <p className="mt-4 text-[var(--brand-green-900)]/85">
-            Eine Auswahl unserer wichtigsten Kooperationspartner
+            Unsere wichtigsten Kooperationspartner auf einen Blick
           </p>
         </div>
 
-        <div className="grid gap-8 sm:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {mainPartners.map((p) => (
             <a
               key={p.name}
               href={p.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex items-center justify-center rounded-[var(--radius-xl)] bg-white border border-[color:rgb(212_175_55_/0.3)] shadow-[var(--shadow-micro)] hover:shadow-[var(--shadow-lift)] transition p-10"
+              className="group relative flex items-center justify-center rounded-[var(--radius-xl)] 
+                         bg-[rgba(20,82,68,0.45)] border border-[color:rgb(212_175_55_/0.3)] 
+                         shadow-[var(--shadow-micro)] hover:shadow-[var(--shadow-lift)] 
+                         transition p-10"
             >
               <img
                 src={p.logo}
                 alt={p.name}
-                className="max-h-16 object-contain opacity-90 group-hover:opacity-100 transition"
+                className="max-h-24 max-w-[220px] object-contain opacity-90 group-hover:opacity-100 transition"
                 loading="lazy"
               />
               <span className="sr-only">{p.name}</span>
             </a>
           ))}
         </div>
+      </Container>
+    </Section>
+  );
+};
 
-        {/* Weitere Partner */}
-        <div className="mt-20 text-center">
-          <h3 className="text-xl font-display mb-6">Weitere Partner</h3>
-          <div className="flex flex-wrap items-center justify-center gap-10 opacity-80 hover:opacity-100 transition">
-            {otherPartners.map((p) => (
-              <a
-                key={p.name}
-                href={p.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center"
-              >
-                <img
-                  src={p.logo}
-                  alt={p.name}
-                  className="h-12 object-contain"
-                  loading="lazy"
-                />
-              </a>
-            ))}
-          </div>
+
+const OtherPartners = () => {
+  const otherPartners = [
+    { name: "Sparkasse", logo: "https://th.bing.com/th/id/OIP.9EqQdEd0GeVnfGhyM9HAxQHaHk?w=181&h=185&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3", url: "https://sparkasse.de" },
+    { name: "Allianz", logo: "https://th.bing.com/th/id/OIP.T7IUXqol3NYVajE9nZGRwwHaEK?w=273&h=180&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3", url: "https://allianz.de" },
+  ];
+
+  return (
+    <Section id="weitere-partner" className="py-24 bg-gradient-to-b from-[var(--neutral-50)] to-white">
+      <Container>
+        <div className="text-center mb-12">
+          <h2 className="text-[32px] leading-[40px] font-display">Weitere Partner</h2>
+          <div className="mx-auto mt-2 h-[2px] w-16 bg-[var(--brand-gold-500)]/70 rounded-full" />
+        </div>
+
+        <div className="flex flex-wrap items-center justify-center gap-10 opacity-80 hover:opacity-100 transition">
+          {otherPartners.map((p) => (
+            <a
+              key={p.name}
+              href={p.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <img
+                src={p.logo}
+                alt={p.name}
+                className="h-12 object-contain"
+                loading="lazy"
+              />
+            </a>
+          ))}
         </div>
       </Container>
     </Section>
@@ -778,9 +893,10 @@ export default function App() {
         <About />
         <Process />
         <Testimonials />
+        <MainPartners/>
          <Recommend /> 
         <Contact />
-        <Partners />
+        
          <PartnerApply />   
       </main>
       <Footer />
